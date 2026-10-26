@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="岁岁记隐私政策：说明本地生日资料、提醒权限和数据删除方式。" />
+    <meta name="theme-color" content="#12463c" />
+    <title>岁岁记隐私政策</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <header class="hero" aria-labelledby="page-title">
+        <div class="brand-mark" aria-hidden="true">岁</div>
+        <div>
+          <p class="eyebrow">岁岁记 · 本地生日提醒</p>
+          <h1 id="page-title">隐私政策</h1>
+          <p class="intro">我们清楚说明岁岁记如何处理与你有关的信息。</p>
+        </div>
+      </header>
+
+      <aside class="notice" id="configuration-notice" hidden>
+        <strong>上线前请完成资料配置。</strong>
+        <span>本页的运营者、客服邮箱和备案号尚未填写，请不要将当前版本公开发布。</span>
+      </aside>
+
+      <section class="summary" aria-label="政策摘要">
+        <article><span class="summary-icon" aria-hidden="true">⌂</span><div><strong>仅存本机</strong><p>生日和提醒资料保存在你的设备中。</p></div></article>
+        <article><span class="summary-icon" aria-hidden="true">◷</span><div><strong>用于提醒</strong><p>通知和系统事件只用于安排、恢复本地提醒。</p></div></article>
+        <article><span class="summary-icon" aria-hidden="true">×</span><div><strong>不上传资料</strong><p>当前版本没有账号、云同步、广告或行为统计。</p></div></article>
+      </section>
+
+      <section class="document" aria-label="隐私政策正文">
+        <dl class="metadata">
+          <div><dt>生效日期</dt><dd id="effective-date">2026-10-25</dd></div>
+          <div><dt>适用版本</dt><dd id="app-version">0.2.1</dd></div>
+        </dl>
+
+        <section>
+          <h2>一、我们如何处理信息</h2>
+          <p>岁岁记用于记录亲友的姓名、生日日期、农历闰月标记、备注和提醒设置。这些信息仅保存在你的设备本地数据库中，用于显示生日和安排本地通知。</p>
+          <p>当前版本不提供账号、云同步、广告或行为统计服务，不会将上述生日信息上传至岁岁记运营者的服务器。</p>
+        </section>
+
+        <section>
+          <h2>二、系统权限与用途</h2>
+          <ul>
+            <li><strong>通知权限：</strong>用于在你选择的时间显示生日提醒。</li>
+            <li><strong>准时提醒权限：</strong>用于尽量按你设置的时刻发送本地提醒。</li>
+            <li><strong>开机、时间或时区变化后的系统事件：</strong>仅用于恢复已经安排的本地提醒。</li>
+            <li><strong>系统时区：</strong>用于按当地时间计算和安排提醒。</li>
+          </ul>
+          <p>你可以在系统设置中关闭相关权限；关闭后，对应的提醒功能可能无法正常工作。</p>
+        </section>
+
+        <section>
+          <h2>三、第三方组件</h2>
+          <p>应用使用以下组件实现离线功能：Flutter（界面运行）、Drift/SQLite（本地数据库）、flutter_local_notifications（本地通知）、flutter_timezone 与 timezone（时区计算）、lunar（农历日期计算）和 uuid（本机记录标识）。</p>
+          <p>当前版本未接入广告、统计、登录、地图、支付或云服务 SDK，也不会通过上述组件向岁岁记运营者上传你的生日记录。</p>
+        </section>
+
+        <section>
+          <h2>四、保存与删除</h2>
+          <p>你可以在应用内删除单条生日，也可以在“提醒设置”中清除全部本机数据。卸载应用或在系统设置中清除应用数据，也会删除本机数据。</p>
+          <p>当前版本没有云端副本，因此删除后无法恢复。请在执行删除、卸载或清除数据前确认你的操作。</p>
+        </section>
+
+        <section>
+          <h2>五、联系我们</h2>
+          <dl class="contact-list">
+            <div><dt>运营者</dt><dd id="operator-name">请填写运营者姓名或名称</dd></div>
+            <div><dt>客服邮箱</dt><dd><a id="support-email" href="#">请填写客服邮箱</a></dd></div>
+            <div><dt>APP 备案号</dt><dd id="app-filing-number">请填写 APP 备案号</dd></div>
+          </dl>
+          <p>如有与本政策有关的问题，请通过上述客服邮箱联系。</p>
+        </section>
+
+        <section>
+          <h2>六、更新</h2>
+          <p>当功能、权限或数据处理方式发生实质变化时，我们会更新本政策，并在应用中提示你重新阅读。</p>
+        </section>
+      </section>
+
+      <footer><span>© <span id="year"></span> <span id="footer-operator">岁岁记</span></span><a href="#page-title">回到顶部</a></footer>
+    </main>
+    <script src="site-config.js"></script>
+    <script src="policy.js"></script>
+  </body>
+</html>
