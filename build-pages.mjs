@@ -11,7 +11,7 @@ const config = {
   operatorName: process.env.OPERATOR_NAME.trim(),
   supportEmail: process.env.SUPPORT_EMAIL.trim(),
   appFilingNumber: process.env.APP_FILING_NUMBER.trim(),
-  appVersion: process.env.APP_VERSION?.trim() || '1.0.0',
+  appVersion: process.env.APP_VERSION?.trim() || '1.0.1',
   effectiveDate: process.env.EFFECTIVE_DATE?.trim() || '2026-10-25',
 };
 
