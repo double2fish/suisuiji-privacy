@@ -1,0 +1,47 @@
+name: Deploy privacy policy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      OPERATOR_NAME: ${{ vars.OPERATOR_NAME }}
+      SUPPORT_EMAIL: ${{ vars.SUPPORT_EMAIL }}
+      APP_FILING_NUMBER: ${{ vars.APP_FILING_NUMBER }}
+      APP_VERSION: 0.2.1
+      EFFECTIVE_DATE: 2026-10-25
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+      - name: Build static site
+        run: node build-pages.mjs
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
