@@ -13,7 +13,7 @@
   document.querySelector('#operator-name').textContent = operatorName;
   document.querySelector('#footer-operator').textContent = operatorName;
   document.querySelector('#effective-date').textContent = value('effectiveDate', '2026-10-25');
-  document.querySelector('#app-version').textContent = value('appVersion', '1.0.0');
+  document.querySelector('#app-version').textContent = value('appVersion', '1.0.1');
   document.querySelector('#app-filing-number').textContent = filingNumber;
   document.querySelector('#year').textContent = new Date().getFullYear();
 
