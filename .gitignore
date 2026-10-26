@@ -1,0 +1,4 @@
+# This file contains the real publisher identity for a deployed policy page.
+# Keep it local and do not commit it to the source repository.
+site-config.js
+dist/
