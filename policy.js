@@ -30,5 +30,9 @@
     [operatorName, supportEmail, filingNumber].some((item) =>
       Object.values(placeholders).includes(item),
     );
-  document.querySelector('#configuration-notice').hidden = !needsConfiguration;
+  const configurationNotice = document.querySelector('#configuration-notice');
+  configurationNotice.hidden = !needsConfiguration;
+  if (!needsConfiguration) {
+    configurationNotice.style.display = 'none';
+  }
 })();
